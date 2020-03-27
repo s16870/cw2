@@ -9,7 +9,7 @@ namespace Cw2.Utilities
     {
         public static void Log(string msg)
         {
-            File.AppendAllText(Properties.loggerPath, DateTime.Today.ToString("dd-MM-yyyy HH:mm:ss") + msg);
+            File.AppendAllText(Properties.loggerPath, DateTime.UtcNow.ToString("dd-MM-yyyy HH:mm:ss") + " " + msg + "\n");
         }
     }
 }

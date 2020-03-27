@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using System.Xml.Serialization;
 using Cw2.Models;
 
 namespace Cw2.Utilities
@@ -50,8 +49,9 @@ namespace Cw2.Utilities
                 Boolean isDupli = false;
                 foreach (var stud in students)
                 {
-                    if (stud.NumerIndeksu == row[4] && stud.Imie == row[0] && stud.Nazwisko == row[1])
+                    if (stud.NumerIndeksu == 's'+row[4] && stud.Imie == row[0] && stud.Nazwisko == row[1])
                     {
+                        Logger.Log("Duplicate row: " + line);
                         isDupli = true;
                         break;
                     }
@@ -83,17 +83,12 @@ namespace Cw2.Utilities
                 }
             }
             stream.Dispose();
-            createXml(students, studies, outputFilePath);
-        }
-        private void createXml(List<Student> students, List<AktywneStudia> studies, string path)
-        {
-            FileStream writer = new FileStream(path, FileMode.OpenOrCreate);
-            XmlSerializer serializer = new XmlSerializer(typeof(XMLRoot));
-            XMLRoot root = new XMLRoot();
-            root.Studenci = students;
-            root.Studia = studies;
-            serializer.Serialize(writer,root);
-            writer.Dispose();
+            switch (outputType.ToLower())
+            {
+                case "xml": FileGenerator.createXml(students, studies, outputFilePath);break;
+                case "json:": FileGenerator.createJSON(students, studies, outputFilePath);break;
+                default: break;
+            }
         }
     }
 }

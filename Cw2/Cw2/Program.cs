@@ -11,10 +11,7 @@ namespace Cw2
     {
         static void Main(string[] args)
         {
-            if (!File.Exists(Properties.loggerPath))
-            {
-                File.Create(Properties.loggerPath);
-            }
+            Logger.Log("-----------------------------Application started!--------------------------------------");
             string inputFilePath; 
             string outputFilePath; 
             string outputType;
@@ -53,7 +50,7 @@ namespace Cw2
             }
             var serializer = new Serializer();
             serializer.startSerialization(inputFilePath, outputFilePath, outputType);
-
+            Logger.Log("Task Completed Successfully!");
         }
     }
 }

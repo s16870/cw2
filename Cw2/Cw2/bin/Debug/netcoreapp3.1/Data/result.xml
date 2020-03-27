@@ -86,30 +86,6 @@
         <mode>Dzienne</mode>
       </studies>
     </student>
-    <student indexNumber="s4450">
-      <fname>Zbigniew</fname>
-      <lname>Kowalski35</lname>
-      <birthdate>2000-02-12</birthdate>
-      <email>35@pjwstk.edu.pl</email>
-      <mothersName>Alina</mothersName>
-      <fathersName>Adam</fathersName>
-      <studies>
-        <name>Sztuka Nowych Mediów dzienne</name>
-        <mode />
-      </studies>
-    </student>
-    <student indexNumber="s4455">
-      <fname>Karolina</fname>
-      <lname>Nowak36</lname>
-      <birthdate>2000-02-12</birthdate>
-      <email>36@pjwstk.edu.pl</email>
-      <mothersName>Alina</mothersName>
-      <fathersName>Adam</fathersName>
-      <studies>
-        <name>Sztuka Nowych Mediów dzienne</name>
-        <mode />
-      </studies>
-    </student>
     <student indexNumber="s4799">
       <fname>Joanna</fname>
       <lname>Brzęczyszczykiewicz37</lname>
@@ -172,14 +148,14 @@
     </student>
     <student indexNumber="s4434">
       <fname>Aleksandra</fname>
-      <lname />
+      <lname>Brzęczyszczykiewicz42</lname>
       <birthdate>2000-02-12</birthdate>
       <email>42@pjwstk.edu.pl</email>
       <mothersName>Alina</mothersName>
       <fathersName>Adam</fathersName>
       <studies>
-        <name>Sztuka Nowych Mediów dzienne</name>
-        <mode>Dzienne</mode>
+        <name>Sztuka Nowych Mediów zaoczne</name>
+        <mode>Zaoczne</mode>
       </studies>
     </student>
     <student indexNumber="s4517">
@@ -2398,7 +2374,11 @@
     </studies>
     <studies>
       <name>Sztuka Nowych Mediów dzienne</name>
-      <numberOfStudents>67</numberOfStudents>
+      <numberOfStudents>64</numberOfStudents>
+    </studies>
+    <studies>
+      <name>Sztuka Nowych Mediów zaoczne</name>
+      <numberOfStudents>1</numberOfStudents>
     </studies>
     <studies>
       <name>Informatyka dzienne po angielsku</name>
